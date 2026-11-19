@@ -1,0 +1,299 @@
+/* AASTU Computer Engineering GC Platform Stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', var(--font-sans);
+  --font-mono: 'JetBrains Mono', "SF Mono", Consolas, monospace;
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7;
+  color: #334155;
+  background-color: #f8fafc;
+}
+
+.dark body {
+  color: #cbd5e1;
+  background-color: #0b0f19;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.015em;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4 {
+  color: #f8fafc;
+}
+
+strong, b {
+  font-weight: 600;
+  color: #0f172a;
+}
+.dark strong, .dark b {
+  color: #f8fafc;
+}
+
+code, pre, .font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Glassmorphism Accents */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+.dark .glass-panel {
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* ===================================================
+   CRYSTAL-CLEAR MATHEMATICAL TYPOGRAPHY (KaTeX)
+   =================================================== */
+.katex {
+  font-size: 1.1em !important;
+  line-height: 1.2 !important;
+  text-rendering: geometricPrecision;
+  color: inherit;
+}
+
+.katex-display {
+  margin: 1.25rem 0 !important;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.85rem 1.25rem;
+  background: #f8fafc;
+  border-radius: 0.875rem;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  text-align: center;
+}
+.dark .katex-display {
+  background: #111827;
+  border-color: #1f2937;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Formula Highlight Card */
+.formula-card {
+  position: relative;
+  margin: 1.25rem 0;
+  padding: 1rem 1.25rem;
+  border-radius: 0.875rem;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.03);
+}
+.dark .formula-card {
+  background: #111827;
+  border-color: #1f2937;
+  box-shadow: 0 2px 6px -1px rgba(0, 0, 0, 0.3);
+}
+.formula-card .formula-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2563eb;
+  background: #eff6ff;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.375rem;
+  display: inline-block;
+  margin-bottom: 0.4rem;
+}
+.dark .formula-card .formula-tag {
+  color: #93c5fd;
+  background: #1e3a8a;
+}
+
+/* Inline Code & Code Blocks */
+code.inline-code {
+  font-family: var(--font-mono);
+  font-size: 0.85em;
+  font-weight: 500;
+  color: #2563eb;
+  background-color: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 0.12rem 0.35rem;
+  border-radius: 0.375rem;
+}
+.dark code.inline-code {
+  color: #60a5fa;
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+pre.code-block {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  background-color: #0f172a;
+  color: #f8fafc;
+  border-radius: 0.875rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid #1e293b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 1.25rem 0;
+}
+pre.code-block .code-lang {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid #334155;
+  padding-bottom: 0.25rem;
+  width: 100%;
+}
+
+/* Callout Boxes */
+.callout {
+  margin: 1.25rem 0;
+  padding: 1.15rem 1.35rem;
+  border-radius: 0.875rem;
+  border-left-width: 4px;
+}
+.callout-concept {
+  background-color: #eff6ff;
+  border-color: #3b82f6;
+  color: #1e3a8a;
+}
+.dark .callout-concept {
+  background-color: rgba(30, 58, 138, 0.2);
+  border-color: #60a5fa;
+  color: #bfdbfe;
+}
+
+.callout-case-study {
+  background-color: #faf5ff;
+  border-color: #9333ea;
+  color: #581c87;
+}
+.dark .callout-case-study {
+  background-color: rgba(88, 28, 135, 0.2);
+  border-color: #c084fc;
+  color: #e9d5ff;
+}
+
+.callout-pitfall {
+  background-color: #fffbeb;
+  border-color: #f59e0b;
+  color: #78350f;
+}
+.dark .callout-pitfall {
+  background-color: rgba(120, 53, 15, 0.2);
+  border-color: #fbbf24;
+  color: #fef3c7;
+}
+
+.callout-nee {
+  background-color: #ecfdf5;
+  border-color: #10b981;
+  color: #064e3b;
+}
+.dark .callout-nee {
+  background-color: rgba(6, 78, 59, 0.25);
+  border-color: #34d399;
+  color: #a7f3d0;
+}
+
+/* Canvas styling */
+#robot-canvas {
+  touch-action: none;
+  cursor: crosshair;
+}
+
+/* Flashcard 3D Perspective Animation */
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Sidebar Navigation Items - No Truncation */
+.ch-nav-item {
+  white-space: normal;
+  text-align: left;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Scrollbar utilities */
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-none {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Print / PDF generation stylesheet */
+@media print {
+  aside,
+  header,
+  footer,
+  #ai-tutor-trigger,
+  #ai-tutor-drawer,
+  .not-prose button,
+  #global-search-input,
+  #theme-toggle-btn,
+  #sound-toggle-btn {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .border {
+    border-color: #e2e8f0 !important;
+  }
+}

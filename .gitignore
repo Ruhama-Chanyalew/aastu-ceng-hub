@@ -1,0 +1,14 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python cache & logs
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+
+# Local environment & secrets
+.env
+.env.local
